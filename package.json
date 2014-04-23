@@ -13,7 +13,7 @@
     }
   ],
   "main": "./lib/close-tags",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Closes HTML tags in text and source code.",
   "activationEvents": [
     "close-tags:close"
