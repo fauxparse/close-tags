@@ -4,7 +4,7 @@ Atom plugin to close HTML tags in text and source code.
 
 Install using
 
-    `apm install autoclose-html`
+    `apm install close-tags`
 
 Works with multiple cursors!
 
