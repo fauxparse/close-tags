@@ -16,7 +16,7 @@
   "version": "0.0.0",
   "description": "Closes HTML tags in text and source code.",
   "activationEvents": ["close-tags:close"],
-  "repository": "https://github.com/atom/close-tags",
+  "repository": "https://github.com/fauxparse/close-tags",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
