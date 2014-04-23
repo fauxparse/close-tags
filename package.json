@@ -1,0 +1,26 @@
+{
+  "name": "close-tags",
+  "author": {
+    "name": "Matt Powell",
+    "email": "fauxparse@gmail.com",
+    "url": "http://fauxpar.se"
+  },
+  "contributors": [
+    {
+      "name": "Matt Powell",
+      "email": "fauxparse@gmail.com",
+      "url": "http://fauxpar.se"
+    }
+  ],
+  "main": "./lib/close-tags",
+  "version": "0.0.0",
+  "description": "Closes HTML tags in text and source code.",
+  "activationEvents": ["close-tags:close"],
+  "repository": "https://github.com/atom/close-tags",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
