@@ -24,6 +24,7 @@ module.exports =
       @insertClosingTag selection, stack.pop()
     else
       console.warn "Couldn't find closing tag."
+      atom.beep()
 
   findTagsIn: (text) ->
     stack = []
