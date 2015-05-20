@@ -7,5 +7,8 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'.atom-text-editor':
+'.platform-darwin atom-workspace atom-text-editor':
   'alt-cmd-.': 'close-tags:close'
+
+'.platform-windows atom-workspace atom-text-editor':
+  'alt-ctrl-.': 'close-tags:close'
