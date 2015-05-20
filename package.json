@@ -15,9 +15,9 @@
   "main": "./lib/close-tags",
   "version": "0.2.1",
   "description": "Closes HTML tags in text and source code.",
-  "activationEvents": [
-    "close-tags:close"
-  ],
+  "activationCommands": {
+    "atom-text-editor": [ "close-tags:close" ]
+  },
   "repository": "https://github.com/fauxparse/close-tags",
   "license": "MIT",
   "engines": {
