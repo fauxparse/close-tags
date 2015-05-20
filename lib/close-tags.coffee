@@ -11,10 +11,11 @@ module.exports =
       else
         []
 
-    atom.workspaceView.command "close-tags:close", => @closeCurrentTags()
+    atom.commands.add "atom-text-editor",
+      "close-tags:close": => @closeCurrentTags()
 
   closeCurrentTags: ->
-    editor = atom.workspace.activePaneItem
+    editor = atom.workspace.getActivePaneItem()
     for selection in editor.getSelections()
       @closeCurrentTag editor, selection
 
