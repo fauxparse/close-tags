@@ -6,7 +6,10 @@ module.exports =
 
   activate: (state) ->
     atom.config.observe "close-tags.emptyTags", (value) =>
-      @emptyTags = (tag.toLowerCase() for tag in value.split(/\s*[\s,|]+\s*/))
+      @emptyTags = if value?
+        (tag.toLowerCase() for tag in value.split(/\s*[\s,|]+\s*/) when tag)
+      else
+        []
 
     atom.workspaceView.command "close-tags:close", => @closeCurrentTags()
 
