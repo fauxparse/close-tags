@@ -1,15 +1,19 @@
 module.exports =
   emptyTags: []
 
-  configDefaults:
-    emptyTags: "br, hr, img, input, link, meta, area, base, col, command, embed, keygen, param, source, track, wbr"
+  config:
+    emptyTags:
+      type: "array"
+      default: [
+        "br", "hr", "img", "input", "link", "meta", "area", "base", "col",
+        "command", "embed", "keygen", "param", "source", "track", "wbr"
+      ]
+      items:
+        type: "string"
 
   activate: (state) ->
     atom.config.observe "close-tags.emptyTags", (value) =>
-      @emptyTags = if value?
-        (tag.toLowerCase() for tag in value.split(/\s*[\s,|]+\s*/) when tag)
-      else
-        []
+      @emptyTags = value
 
     atom.commands.add "atom-text-editor",
       "close-tags:close": => @closeCurrentTags()
