@@ -1,11 +1,4 @@
-'menu': [
-  {
-    'label': 'Packages'
-    'submenu': [
-      'label': 'Close Tags'
-      'submenu': [
-        { 'label': 'Close current tag', 'command': 'close-tags:close' }
-      ]
-    ]
-  }
-]
+'context-menu':
+  'atom-text-editor': [
+    { 'label': 'Close current tag', 'command': 'close-tags:close' }
+  ]
