@@ -10,5 +10,8 @@
 '.platform-darwin atom-workspace atom-text-editor':
   'alt-cmd-.': 'close-tags:close'
 
-'.platform-windows atom-workspace atom-text-editor':
+'.platform-win32 atom-workspace atom-text-editor':
+  'alt-ctrl-.': 'close-tags:close'
+
+'.platform-linux atom-workspace atom-text-editor':
   'alt-ctrl-.': 'close-tags:close'
