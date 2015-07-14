@@ -13,7 +13,7 @@
     }
   ],
   "main": "./lib/close-tags",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Closes HTML tags in text and source code.",
   "activationCommands": {
     "atom-text-editor": [
