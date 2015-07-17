@@ -56,7 +56,7 @@ module.exports =
     text.substr i + 3
 
   handleTag: (text, stack) ->
-    if match = text.match(/<(\/)?(([a-z][^\s\/>]*)(\/)?)/i)
+    if match = text.match(/<(\/)?(\w+)((?:\s+\w+(?:\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)(\/)?>/)
       if tag = match[2]
         if match[1]
           # closing tag: find matching opening tag (if one exists)
@@ -64,7 +64,7 @@ module.exports =
             break if stack.pop() is tag
         else
           # opening tag, possibly empty
-          stack.push tag unless @isEmpty(tag)
+          stack.push tag unless match[4] or @isEmpty(tag)
       text.substr match[0].length
     else
       text.substr 1
@@ -73,4 +73,4 @@ module.exports =
     selection.insertText "</#{tag}>"
 
   isEmpty: (tag) ->
-    tag.substr(-1) is "/" or @emptyTags.indexOf(tag.toLowerCase()) > -1
+    @emptyTags.indexOf(tag.toLowerCase()) > -1
