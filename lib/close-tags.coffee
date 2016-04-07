@@ -56,7 +56,7 @@ module.exports =
     text.substr i + 3
 
   handleTag: (text, stack) ->
-    if match = text.match(/<(\/)?(\w+)((?:\s+\w+(?:\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)(\/)?>/)
+    if match = text.match(/<(\/)?([\w\:\-]+)((?:\s+[\w\:\-]+(?:\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)(\/)?>/)
       if tag = match[2]
         if match[1]
           # closing tag: find matching opening tag (if one exists)
